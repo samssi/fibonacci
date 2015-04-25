@@ -20,6 +20,7 @@ public class KeyboardInputUi {
                 FibonacciCalculator fibonacciCalculator = new FibonacciCalculator();
                 fibonacciCalculator.calculate(startingNumber1, 1, numberOfNumbers);
             } catch (FibonacciCalculatorException fce) {
+                System.out.println(fce.getMessage());
                 receiveInput();
             }
         }
