@@ -7,7 +7,7 @@ import java.util.List;
 
 public class FibonacciCalculator {
 
-    public List<Long> calculate(int startingNumber1, int startingNumber2, int totalNumbers) {
+    public List<Long> calculate(int startingNumber1, int startingNumber2, int totalNumbers) throws FibonacciCalculatorException {
         List<Long> results = initResults(startingNumber1, startingNumber2);
         for(int i = 0; i < totalNumbers; i++) {
             results.add(nextNumber(results));
