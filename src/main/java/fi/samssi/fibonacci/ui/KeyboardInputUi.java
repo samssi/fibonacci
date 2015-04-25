@@ -13,17 +13,21 @@ public class KeyboardInputUi {
     private void receiveInput() {
         while (true) {
             try {
-                ClassicOrModernSelector classicOrModernSelector = new ClassicOrModernSelector();
-                int startingNumber1 = classicOrModernSelector.select();
-                NumberOfNumberSelector numberOfNumberSelector = new NumberOfNumberSelector();
-                int numberOfNumbers = numberOfNumberSelector.select();
-                FibonacciCalculator fibonacciCalculator = new FibonacciCalculator();
-                fibonacciCalculator.calculate(startingNumber1, 1, numberOfNumbers);
+                captureInputAndCalculate();
             } catch (FibonacciCalculatorException fce) {
                 System.out.println(fce.getMessage());
                 receiveInput();
             }
         }
+    }
+
+    private void captureInputAndCalculate() throws FibonacciCalculatorException {
+        ClassicOrModernSelector classicOrModernSelector = new ClassicOrModernSelector();
+        int startingNumber1 = classicOrModernSelector.select();
+        NumberOfNumberSelector numberOfNumberSelector = new NumberOfNumberSelector();
+        int numberOfNumbers = numberOfNumberSelector.select();
+        FibonacciCalculator fibonacciCalculator = new FibonacciCalculator();
+        System.out.println(fibonacciCalculator.calculate(startingNumber1, 1, numberOfNumbers));
     }
 
     private void welcomeMessage() {

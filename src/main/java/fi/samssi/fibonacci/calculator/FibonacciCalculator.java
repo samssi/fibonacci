@@ -12,7 +12,6 @@ public class FibonacciCalculator {
         for(int i = 0; i < totalNumbers; i++) {
             results.add(nextNumber(results));
         }
-        System.out.println(results);
         return results;
     }
 
