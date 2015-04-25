@@ -1,5 +1,7 @@
 package fi.samssi;
 
+import fi.samssi.fibonacci.calculator.FibonacciCalculator;
+import fi.samssi.fibonacci.exception.FibonacciCalculatorException;
 import org.junit.Assert;
 import org.junit.Test;
 

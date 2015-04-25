@@ -1,4 +1,4 @@
-package fi.samssi;
+package fi.samssi.fibonacci.exception;
 
 public class FibonacciCalculatorException extends RuntimeException {
 

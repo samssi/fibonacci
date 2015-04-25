@@ -1,4 +1,6 @@
-package fi.samssi;
+package fi.samssi.fibonacci.calculator;
+
+import fi.samssi.fibonacci.exception.FibonacciCalculatorException;
 
 import java.util.ArrayList;
 import java.util.List;
