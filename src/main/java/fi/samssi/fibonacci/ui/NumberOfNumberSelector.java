@@ -9,16 +9,18 @@ public class NumberOfNumberSelector {
     public int select() {
         String instructions = "Enter number of numbers being calculated: ";
         System.out.print(instructions);
-        int selection = 0;
+        int selection;
         try {
             selection = scanForNumberOfNumbers();
-            System.out.println("Selected: " + selection);
-        } catch (NumberOfNumbersInputException nonie) { }
+        }
+        catch (NumberOfNumbersInputException e) {
+            selection = select();
+        }
         return selection;
 
     }
 
-    private int scanForNumberOfNumbers() {
+    private int scanForNumberOfNumbers() throws NumberOfNumbersInputException {
         Scanner numberOfNumbers;
         int result;
         try {
@@ -26,8 +28,7 @@ public class NumberOfNumberSelector {
             result = numberOfNumbers.nextInt();
         }
         catch (InputMismatchException ime) {
-            System.out.println("Please give a valid number!");
-            select();
+            System.out.println("Valid number only accepted here!");
             throw new NumberOfNumbersInputException();
         }
         return result;
