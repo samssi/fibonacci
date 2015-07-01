@@ -5,7 +5,7 @@ import fi.samssi.fibonacci.exception.FibonacciCalculatorException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static fi.samssi.fibonacci.calculator.OverFlowUtil.didntOverflowResult;
+import static fi.samssi.fibonacci.util.OverFlowUtil.didntOverflowResult;
 
 public class RegularFibonacciCalculator implements FibonacciCalculator {
 

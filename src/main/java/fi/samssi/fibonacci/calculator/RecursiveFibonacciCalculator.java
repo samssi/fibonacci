@@ -5,7 +5,7 @@ import fi.samssi.fibonacci.exception.FibonacciCalculatorException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static fi.samssi.fibonacci.calculator.OverFlowUtil.didntOverflowResult;
+import static fi.samssi.fibonacci.util.OverFlowUtil.didntOverflowResult;
 
 public class RecursiveFibonacciCalculator implements FibonacciCalculator {
     public List<Long> calculate(int startingNumber1, int startingNumber2, int totalNumbers) throws FibonacciCalculatorException {

@@ -1,4 +1,4 @@
-package fi.samssi.fibonacci.calculator;
+package fi.samssi.fibonacci.util;
 
 import fi.samssi.fibonacci.exception.FibonacciCalculatorException;
 
