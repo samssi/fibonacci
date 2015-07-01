@@ -1,6 +1,7 @@
 package fi.samssi;
 
 import fi.samssi.fibonacci.calculator.FibonacciCalculator;
+import fi.samssi.fibonacci.calculator.RecursiveFibonacciCalculator;
 import fi.samssi.fibonacci.exception.FibonacciCalculatorException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class FibonacciSpec {
 
-    private final FibonacciCalculator fibonacciCalculator = new FibonacciCalculator();
+    private final FibonacciCalculator fibonacciCalculator = new RecursiveFibonacciCalculator();
     private final int totalNumbers = 4;
 
     @Test

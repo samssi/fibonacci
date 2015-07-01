@@ -1,6 +1,7 @@
 package fi.samssi.fibonacci.ui;
 
 import fi.samssi.fibonacci.calculator.FibonacciCalculator;
+import fi.samssi.fibonacci.calculator.RecursiveFibonacciCalculator;
 import fi.samssi.fibonacci.exception.FibonacciCalculatorException;
 
 
@@ -26,7 +27,7 @@ public class KeyboardInputUi {
         int startingNumber1 = classicOrModernSelector.select();
         NumberOfNumberSelector numberOfNumberSelector = new NumberOfNumberSelector();
         int numberOfNumbers = numberOfNumberSelector.select();
-        FibonacciCalculator fibonacciCalculator = new FibonacciCalculator();
+        FibonacciCalculator fibonacciCalculator = new RecursiveFibonacciCalculator();
         System.out.println(fibonacciCalculator.calculate(startingNumber1, 1, numberOfNumbers));
     }
 
