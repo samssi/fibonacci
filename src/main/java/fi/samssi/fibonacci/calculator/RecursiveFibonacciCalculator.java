@@ -32,9 +32,4 @@ public class RecursiveFibonacciCalculator implements FibonacciCalculator {
             return recursiveCalculation(previous, next, total, numbers);
         }
     }
-
-    public static void main(String... args) {
-        RecursiveFibonacciCalculator recursiveFibonacciCalculator = new RecursiveFibonacciCalculator();
-        System.out.println(recursiveFibonacciCalculator.calculate(0, 1, 1000));
-    }
 }
