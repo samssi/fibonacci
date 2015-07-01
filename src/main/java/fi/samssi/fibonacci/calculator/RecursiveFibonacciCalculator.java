@@ -13,11 +13,15 @@ public class RecursiveFibonacciCalculator implements FibonacciCalculator {
     }
 
     private List<Long> recursiveCalculation(final long x, final long y, final int total, final List<Long> numbers) {
+        addInitialNumbers(x, y, numbers);
+        return compute(x, y, total, numbers);
+    }
+
+    private void addInitialNumbers(final long x, final long y, final List<Long> numbers) {
         if (numbers.isEmpty()) {
             numbers.add(x);
             numbers.add(y);
         }
-        return compute(x, y, total, numbers);
     }
 
     private List<Long> compute(final long x, final long y, final int total, final List<Long> numbers) {
